@@ -18,11 +18,13 @@ import { BorderBeam } from "./ui/border-beam";
 import { useNavigate } from "react-router-dom";
 
 
+
 const Landing = () => {
   let navigate = useNavigate()
   function register(){
     navigate("/Register")
   }
+ 
   return (
     <>
       <div className="">
@@ -32,13 +34,13 @@ const Landing = () => {
           <OrbitingCircles className="">
             <Particles />
           </OrbitingCircles>
-
+           
           <div className="absolute inset-0 flex flex-col mt-16 sm:mt-0 mb-96 justify-center items-center text-white text-center px-4">
             <TypingAnimation
               duration={60}
               delay={0}
               startOnView={true}
-              className="text-white text-2xl md:text-5xl font-jetbrains font-bold"
+              className="text-white z-10 text-2xl md:text-5xl font-jetbrains font-bold"
             >
               {"Join the Future of Cloud Computing"}
             </TypingAnimation>
@@ -46,22 +48,22 @@ const Landing = () => {
               duration={100}
               delay={200}
               startOnView={true}
-              className="text-white text-md md:text-3xl mt-1 sm:mt-4 font-jetbrains font-bold"
+              className="text-white text-md z-10 md:text-3xl mt-1 sm:mt-4 font-jetbrains font-bold"
             >
               {"Innovating the World of Technology and Coding"}
             </TypingAnimation>
-            <p className="text-white mt-7 text-xs md:text-xl font-jetbrains">
-              {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-              amet */}
+            <motion.p  className="text-white mt-7 z-10 text-xs md:text-xl font-jetbrains">
                our society empowers tech enthusiasts and professionals to explore coding   and 
               <br className="mt-3"/>innovative technologies,  shaping the future with passion and expertise
-            </p>
+            </motion.p>
 
             <div className="text-white z-40 text-xl md:text-xl mt-4 font-bold">
               <ShimmerButton onClick={register} className="cursor-pointer hover:scale-125 font-rubik transition-all ease-in-out duration-1000 delay-0">
                 Register
               </ShimmerButton>
             </div>
+
+          
           </div>
 
           <div className="absolute inset-0 flex sm:flex-col justify-center items-center sm:max-w-[90vw] w-full  text-white text-center px-4">
@@ -100,14 +102,14 @@ const Landing = () => {
                 Hello, Coders!
               </h1>
             </ShineBorder>
-           <div className="absolute top-60 right-10 sm:right-16 -z-10 max-[400px]:hidden">
+           <div className="absolute top-60 right-10 gap-10 sm:right-16  max-[400px]:hidden">
           <img
             src={D}
-            className="h-28 sm:h-40 max-[1000px]:h-24 animate-bounce"
+            className="h-28 sm:h-40 -z-10 max-[1000px]:h-24 animate-bounce"
             alt="D"
           />
         </div>
-        <div className="absolute top-60 left-10 -z-10 sm:left-60 max-[400px]:hidden">
+        <div className="absolute top-60 left-10 z-[2px] sm:left-60 max-[400px]:hidden">
           <img
             src={C}
             className="h-28 sm:h-40 -z-10 max-[1000px]:h-24 animate-bounce"
